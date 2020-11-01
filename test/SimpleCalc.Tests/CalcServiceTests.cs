@@ -94,5 +94,14 @@ namespace SimpleCalc.Tests
                 .Throws<DivideByZeroException>(() => cs.UnsafeDivide(x, y));
 
         }
+
+        [Theory]
+        [InlineData(1,0)]
+        public void test_fail(int x, int y)
+        {
+            Assert.Equal(x, y);
+        }
+
+
     }
 }
